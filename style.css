@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+  background: #f3efe8;
+}
+
+/* Center the scroll */
+.scroll-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The scroll itself */
+.poem {
+  width: 60%;
+  max-height: 80vh;
+  overflow-y: auto;
+
+  background: #fff8dc;
+  padding: 40px;
+
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+
+/* Smooth scrolling */
+.poem {
+  scroll-behavior: smooth;
+}
+
+/* Title */
+.poem h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.poem::-webkit-scrollbar {
+  width: 6px;
+}
+
+.poem::-webkit-scrollbar-thumb {
+  background: #c2b280;
+  border-radius: 10px;
+}
+
+.poem {
+  background-image: url("parchment.jpg");
+  background-size: cover;
+}
