@@ -16,5 +16,25 @@
 
   </div>
 </div>
+<script>
+const quatrains = document.querySelectorAll('.quatrain');
+
+function revealQuatrains() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  quatrains.forEach(q => {
+    const quatrainTop = q.getBoundingClientRect().top;
+
+    if (quatrainTop < triggerBottom) {
+      q.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealQuatrains);
+
+// Optional: reveal first quatrains if already in view
+revealQuatrains();
+</script>
 </body>
 </html>
