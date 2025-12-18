@@ -7,31 +7,15 @@ body {
 
 /* Center the scroll */
 .scroll-container {
-  height: 100vh;
+  height: 100vh; /* full viewport height */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* The scroll itself */
 .poem {
   width: 60%;
-  max-height: 80vh;
-  overflow-y: auto;
-
-  background: #fff8dc;
-  padding: 40px;
-
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-
-  line-height: 1.8;
-  font-size: 1.2rem;
-}
-
-/* Smooth scrolling */
-.poem {
-  scroll-behavior: smooth;
+  max-height: 80vh;  /* this limits the height */
+  overflow-y: auto;   /* allows scrolling */
 }
 
 /* Title */
