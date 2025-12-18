@@ -1,40 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Para a Mãe</title>
+  <title>For Mom</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <div class="scroll-container">
-  <div class="poem">
-    <h1>For My Mom</h1>
+    <div class="poem">
+      <h1>For My Mom</h1>
 
-    <div class="quatrain">Roses are red,<br>Violets are blue,<br>Every line I write,<br>Is for you.</div>
-    <div class="quatrain">Your smile lights my day,<br>Your hug keeps me warm,<br>Through every storm,<br>You guide my way.</div>
-    <div class="quatrain">Forever grateful,<br>Forever true,<br>Every beat of my heart,<br>Belongs to you.</div>
+      <div class="quatrain">
+        Roses are red,<br>
+        Violets are blue,<br>
+        Every line I write,<br>
+        Is for you.
+      </div>
 
+      <div class="quatrain">
+        Your smile lights my day,<br>
+        Your hug keeps me warm,<br>
+        Through every storm,<br>
+        You guide my way.
+      </div>
+
+      <div class="quatrain">
+        Forever grateful,<br>
+        Forever true,<br>
+        Every beat of my heart,<br>
+        Belongs to you.
+      </div>
+
+    </div>
   </div>
-</div>
-<script>
-const quatrains = document.querySelectorAll('.quatrain');
 
-function revealQuatrains() {
-  const triggerBottom = window.innerHeight * 0.85;
+  <script>
+    const quatrains = document.querySelectorAll('.quatrain');
+    let index = 0;
 
-  quatrains.forEach(q => {
-    const quatrainTop = q.getBoundingClientRect().top;
-
-    if (quatrainTop < triggerBottom) {
-      q.classList.add('visible');
+    function showNextQuatrain() {
+      if (index < quatrains.length) {
+        quatrains[index].classList.add('visible');
+        index++;
+        setTimeout(showNextQuatrain, 2000); // adjust speed here (milliseconds)
+      }
     }
-  });
-}
 
-window.addEventListener('scroll', revealQuatrains);
+    showNextQuatrain();
+  </script>
 
-// Optional: reveal first quatrains if already in view
-revealQuatrains();
-</script>
 </body>
 </html>
