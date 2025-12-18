@@ -3,59 +3,34 @@ body {
   padding: 0;
   font-family: "Georgia", serif;
   background: #f3efe8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-/* Center the scroll */
-.scroll-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-/* The scroll container */
-.poem {
-  width: 60%;
-  background-image: url("parchment.jpg"); /* optional: add your parchment image */
-  background-size: cover;
-  background-position: center;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   line-height: 1.8;
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* bigger text */
+  color: #333;
+}
+
+/* Center poem text */
+.poem {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
   text-align: center;
 }
 
-/* Scrollbar styling (optional) */
-.poem::-webkit-scrollbar {
-  width: 6px;
+/* Title styling */
+.poem h1 {
+  font-size: 3rem; /* bigger title */
+  margin-bottom: 60px;
 }
 
-.poem::-webkit-scrollbar-thumb {
-  background: #c2b280;
-  border-radius: 10px;
-}
-
-/* Quatrain styling */
+/* Quatrains styling */
 .quatrain {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(50px); /* start below */
   transition: opacity 1s ease, transform 1s ease;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .quatrain.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Title */
-.poem h1 {
-  margin-bottom: 40px;
-  font-size: 2rem;
 }
